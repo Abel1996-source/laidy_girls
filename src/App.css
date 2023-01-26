@@ -1,38 +1,437 @@
-.App {
-  text-align: center;
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+body{
+    box-sizing: content-box;
+    padding: 0px;
+    margin: 0px;
+    background-color:rgba(241, 81, 86,0.3);
+}
+/*------------------------------------------------
+       page Home.jsx
+---------------------------------------------*/
+
+
+/* --------------------------------------------
+            Navbar.jsx
+--------------------------------------------*/
+
+.navbar{
+    width: 100%;
+    height: 150px;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+.items-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.a{
+    text-decoration: none;
+    color: #000;
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+}
+.a:hover{
+    border-bottom: 2px solid red;
+    color: #000;
+    
+}
+.nav-lateral{
+    display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+.carousel-inner{
+    width: 100%;
+}
+.d-block{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.slide{
+    padding: 0px 30px 0px 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*-----------------------------------------------------------
+        Presentation.jsx
+-------------------------------------------------------*/
+.about{
+    width: 100%;
+    height: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.card-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-item{
+    height: 100%;
+    width: 50%;
+    margin: 1rem;
+    border-radius: 0.3rem;
+
+}
+.carousel-caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*---------------------------------------------------
+        ProgramEvent.jsx
+---------------------------------------------------*/
+.content-event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px 0px 30px;
+    
+}
+.header{
+    margin-bottom: 2rem;
+}
+.head{
+    color: #000;
+    font-weight: bold;
+}
+@media only screen and (min-width: 1200px) {
+    .navbar{
+        width: 100%;
+        height: 150px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .a{
+        text-decoration: none;
+        color: #000;
+    }
+    .logo{
+        text-decoration: none;
+        color: #fff;
+    }
+    .a:hover{
+        border-bottom: 2px solid red;
+        color: #000;
+        
+    }
+    .nav-lateral{
+        display: none;
+    }
+    
+/*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+    .carousel-inner{
+        width: 100%;
+    }
+    .d-block{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+    .slide{
+        padding: 0px 30px 0px 30px;
+    }
+       /*---------------------------------------------------
+            ProgramEvent.jsx
+    ---------------------------------------------------*/
+    .content-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 30px 0px 30px;
+        
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    body{
+        box-sizing: content-box;
+        padding: 0px;
+        margin: 0px;
+        background-color:rgba(241, 81, 86,0.3);
+    }
+    .navbar{
+        width: 100%;
+        height: 150px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .a{
+        text-decoration: none;
+        color: #000;
+    }
+    .logo{
+        text-decoration: none;
+        color: #fff;
+    }
+    .a:hover{
+        border-bottom: 2px solid red;
+        color: #000;
+        
+    }
+    .nav-lateral{
+        display: none;
+    }
+
+/*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+.carousel-inner{
+    width: 100%;
+}
+.d-block{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.slide{
+    padding: 0px 30px 0px 30px;
+}
+   /*---------------------------------------------------
+            ProgramEvent.jsx
+    ---------------------------------------------------*/
+    .content-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 30px 0px 30px;
+        
+    }
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body{
+        box-sizing: content-box;
+        padding: 0px;
+        margin: 0px;
+        background-color:rgba(241, 81, 86,0.3);
+    }
+    .navbar{
+        width: 100%;
+        height: 150px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .a{
+        text-decoration: none;
+        color: #000;
+    }
+    .logo{
+        text-decoration: none;
+        color: #fff;
+    }
+    .a:hover{
+        border-bottom: 2px solid red;
+        color: #000;
+        
+    }
+    .lateral{
+        display: none;
+    }
+/*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+.carousel-inner{
+    width: 100%;
 }
+.d-block{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.slide{
+    padding: 0px 30px 0px 30px;
+}
+   /*---------------------------------------------------
+            ProgramEvent.jsx
+    ---------------------------------------------------*/
+    .content-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 30px 0px 30px;
+        
+    }
+    
+}
+@media only screen and (min-width: 745px) and (max-width: 767px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .navbar{
+        width: 100%;
+        height: 80px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .a{
+        text-decoration: none;
+        color: #000;
+        size: 10px;
+    }
+    .logo{
+        text-decoration: none;
+        color: #fff;
+    }
+    .a:hover{
+        border-bottom: 2px solid red;
+        color: #000;
+        
+    }
+    .a i,.lat{
+        display: inline-block;
+    }
+    .nav-lateral{
+        display: none;
+    }
+
+/*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+    .carousel-inner{
+        width: 100%;
+    }
+    .d-block{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    .slide{
+        padding: 0px 30px 0px 30px;
+    }
+
+        /*---------------------------------------------------
+            ProgramEvent.jsx
+    ---------------------------------------------------*/
+    .content-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 30px 0px 30px;
+        
+    }
+    
+}
+@media only screen and (max-width: 744px) {
+
+    .navbar{
+        width: 100%;
+        height: 80px;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .items-navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .a{
+        text-decoration: none;
+        color: #000;
+        size: 12px;
+    }
+    .logo{
+        text-decoration: none;
+        color: #fff;
+    }
+    .a:hover{
+        color: #000;
+        
+    }
+    .a:visited{
+      border-bottom: none;  
+    }
+    .nav-lateral{
+        display: inline-block;
+    }
+    .a i,.lat{
+        display: none;
+    }
+    .don{
+        display: inline-block;
+    }
+    .item-1,.item-2,.item-3,.item-4{
+       margin: 1.5rem;
+    }
+   /*----------------------------------------------------------
+                Carousol.jsx
+----------------------------------------------------------*/
+    .carousel-inner{
+        width: 100%;
+    }
+    .d-block{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .slide{
+        padding: 0px 30px 0px 30px;
+    }
+
+        /*---------------------------------------------------
+            ProgramEvent.jsx
+    ---------------------------------------------------*/
+    .content-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 30px 0px 30px;
+        
+    }
+   
 }
