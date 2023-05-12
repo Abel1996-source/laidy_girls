@@ -4,12 +4,22 @@ body{
     box-sizing: content-box;
     padding: 0px;
     margin: 0px;
-    background-color:rgba(241, 81, 86,0.3);
+    background-color:#fff;
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  radial-gradient(#86179A 0.45px, transparent 0.45px), radial-gradient(#86179A 0.45px, #ffffff 0.45px);
+    background-size: 18px 18px;
+    background-position: 0 0,9px 9px;
 }
 /*------------------------------------------------
        page Home.jsx
 ---------------------------------------------*/
-
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 50;
+}
 
 /* --------------------------------------------
             Navbar.jsx
@@ -38,7 +48,7 @@ body{
     color: #fff;
 }
 .a:hover{
-    border-bottom: 2px solid red;
+    border-top: 2px solid red;
     color: #000;
     
 }
@@ -61,35 +71,6 @@ body{
     padding: 0px 30px 0px 30px;
 }
 
-/*-----------------------------------------------------------
-        Presentation.jsx
--------------------------------------------------------*/
-.about{
-    width: 100%;
-    height: 20rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.card-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-item{
-    height: 100%;
-    width: 50%;
-    margin: 1rem;
-    border-radius: 0.3rem;
-
-}
-.carousel-caption{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 /*---------------------------------------------------
         ProgramEvent.jsx
@@ -102,6 +83,16 @@ body{
     padding: 50px 30px 0px 30px;
     
 }
+.card-body{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.card-body .card-title{
+    color: #86179A;
+}
+.to-a{
+    text-decoration: none;
+}
+
 .header{
     margin-bottom: 2rem;
 }
@@ -109,14 +100,56 @@ body{
     color: #000;
     font-weight: bold;
 }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background-color: #e0cdcd;
+}
+.item-foot{
+    height: 100%;
+    margin: 1rem;
+    cursor: pointer;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media only screen and (min-width: 1200px) {
+    /*-----------------------------------------
+            TopNavbar.jx
+    ---------------------------------------------*/
+
+    .top-navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #02A7B0;
+    }
+     /*-----------------------------------------
+            Navbar.jx
+    ---------------------------------------------*/
     .navbar{
         width: 100%;
-        height: 150px;
+        height: 80px;
         display:  flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        background-color: #ffffff;
     }
+    .dropdown-item{
+        margin-top: 1rem;
+        color: #02A7B0;
+        background-color: #86179A;
+    }
+   
     .items-navbar{
         display: flex;
         justify-content: center;
@@ -124,21 +157,43 @@ body{
         width: 100%;
         height: 100%;
     }
+    .dropdown-toggle span{
+        color: #86179A;
+        outline: none;
+    }
     .a{
         text-decoration: none;
-        color: #000;
+        color: #02A7B0;
     }
-    .logo{
+    
+    .don{
+        background-color: #86179A;
+        padding: 0.6rem;
+        color: #fff;
+    }
+    .don i {
+        margin-right: 0.5rem;
+        color: #f23224;
+    }
+    
+    .don a{
         text-decoration: none;
         color: #fff;
     }
+    .don a:hover{
+        color: #fff;
+    }
     .a:hover{
-        border-bottom: 2px solid red;
-        color: #000;
+        border-top: 3px solid #86179A;
+        color: #86179A;
         
     }
     .nav-lateral{
         display: none;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;
     }
     
 /*----------------------------------------------------------
@@ -155,6 +210,14 @@ body{
     .slide{
         padding: 0px 30px 0px 30px;
     }
+    .carousel-caption{
+        font-size: 3rem;
+    }
+    .carousel-caption p{
+        background-color: #02A7B0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
        /*---------------------------------------------------
             ProgramEvent.jsx
     ---------------------------------------------------*/
@@ -166,7 +229,400 @@ body{
         padding: 50px 30px 0px 30px;
         
     }
+    .card-body{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .card-body .card-title{
+        color: #02A7B0;
+    }
+    .to-a{
+        text-decoration: none;
+    }
+    .all-actu a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .all-actu{
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #02A7B0;
+        cursor: pointer;
+       
+    }
+    .all-actu:hover{
+        background-color: #86179A;
+    }
+    .all-actu a:hover{
+        color: #fff;
+    }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #86179A;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    color: #fff;
+    width: 25%;
+ }
+ .info_foot{
+    font-size: 13px;
+ }
+ .face {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .face img{
+    height: 25px;
+    width: 25px;
+ }
+ .other img{
+    height: 50px;
+    width: 50px;
+ }
+/*---------------------------------------------------
+        ToNavbar.jsx
+---------------------------------------------------*/
+.top-navbar{
+    display: flex;
+    justify-content: flex-end;
+   align-items: center;
+}
+.top-navbar div{
+margin: 1.5rem;
+color: #86179A;
+cursor: pointer;
+}
+/*---------------------------------------------------
+        Actions.jsx
+---------------------------------------------------*/
+.content-actions{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background-color: #fff;
+   margin-top: 3rem;
+   padding: 1rem;
+}
+.header-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.action-item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.action{
+    display: block;
+    width: 100%;
+}
+.action-item a{
+    text-decoration: none;
+    color: #86179A;
+}
+.action-item span{
+    width: 20%;
+    margin: 1rem;
+}
+.all-action{
+    position: relative;
+    left: 500px;
+    width: 20%;
+ }
+.TEXT{
+    width: 80%;
+}
+/*----------------------------------------------------------------
+            Partenaire.jsx
+------------------------------------------------------------------*/
+.partenaire-{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parte{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+    /*border-radius: 5px;*/
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.parenaire-{
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+   
+}
+/*----------------------------------------------------------------
+            Temoignage.jsx
+------------------------------------------------------------------*/
+.temoin{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.temoin-{
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
+.-card-{
+    margin: 1rem;
+}
+/*------------------------------------------------------------------
+            Direct.jsx
+--------------------------------------------------------*/
+.direct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(134, 23, 154, 0.7),
+        rgba(134, 23, 154, 0.8)
+      ) ,url("../public/Scolarisation_007_IMG_9148\ 1.png") ;
+}
+.titre-{
+    color: #fff;
+    opacity: 1;
+    margin: 2rem;
+}
+.content-direct{
+    border: 1px solid #fff;
+    width: 100%;
+    height: 80%;
+}
+/*-----------------------------------------------------------
+                Bannier.jsx
+-------------------------------------------------------------*/
+.content-bannier{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.context-ba{
+    border: 1px solid green;
+    width: 60%;
+    height: 350px;
+    background-color: #02A7B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.item-ba{
+    text-align: center;
+}
+.lien a{
+    color: #86179A;
+    text-decoration: none;
+}
+.corps{
+    width: 90%;
+    text-align: justify;
+}
+.ba-{
+    font-weight: bold;
+}
+.image-{
+    width: 40%;
+}
+.image- img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------
+            Actualite.jsx
+---------------------------------------------------*/
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content-news{
+    margin-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.blocs-{
+    border: 1px solid green;
+    width: 25%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000;
+}
+.blocs- img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
+
+.liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color:#000 ;
+}
+.liens a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-text{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------------------
+                Newlatter.jsx
+-----------------------------------------------------------------------------*/
+.newlatter-content{
+    width: 100%;
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-new{
+    width: 55%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.submit input{
+    background-color: #02A7B0;
+    color: #fff;
+}
+.formulaire{
+    width: 70%;
+}
+/*--------------------------------------------------------------
+            Vosdons.jsx traite la rubrique dons
+--------------------------------------------------------------*/
+.vosdon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vos_content{
+    width: 100%;
+    height: 390px;
+    padding: 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.card_{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_ img{
+    width: 100%;
+    height: 220px;
+}
+.price_{
+    background-color: #fff;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prix_{
+    font-size: 2rem;
+    color: #f23224;
+    font-weight: bolder;
+}
+
+.dons_{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dons_ a{
+    text-decoration: none;
+    color: #fff;
+}
+.vos_bottom{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+.vos_pourcent{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.vos_pourcent span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     body{
@@ -175,6 +631,18 @@ body{
         margin: 0px;
         background-color:rgba(241, 81, 86,0.3);
     }
+     /*-----------------------------------------
+            TopNavbar.jx
+    ---------------------------------------------*/
+
+    .top-navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #02A7B0;
+    }
+     /*-----------------------------------------
+            Navbar.jx
+    ---------------------------------------------*/
     .navbar{
         width: 100%;
         height: 150px;
@@ -182,6 +650,7 @@ body{
         justify-content: center;
         align-items: center;
     }
+   
     .items-navbar{
         display: flex;
         justify-content: center;
@@ -189,23 +658,54 @@ body{
         width: 100%;
         height: 100%;
     }
+    .dropdown-item{
+        margin-top: 1rem;
+        color: #02A7B0;
+        background-color: #86179A;
+    }
+    .dropdown-toggle span{
+        color: #86179A;
+        outline: none;
+    }
     .a{
         text-decoration: none;
-        color: #000;
+        color: #02A7B0;
     }
     .logo{
         text-decoration: none;
         color: #fff;
     }
+    .don{
+        background-color: #86179A;
+        padding: 0.6rem;
+        color: #fff;
+    }
+    .don i {
+        margin-right: 0.5rem;
+        color: #f23224;
+    }
+    
+    .don a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .don a:hover{
+        color: #fff;
+    }
+    
     .a:hover{
-        border-bottom: 2px solid red;
-        color: #000;
+        border-top: 3px solid #86179A;
+        color: #86179A;
         
     }
+    
     .nav-lateral{
         display: none;
     }
-
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
 /*----------------------------------------------------------
                 Carousol.jsx
 ----------------------------------------------------------*/
@@ -220,6 +720,14 @@ body{
 .slide{
     padding: 0px 30px 0px 30px;
 }
+.carousel-caption{
+    font-size: 2.5rem;
+}
+.carousel-caption p{
+    background-color: #02A7B0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
    /*---------------------------------------------------
             ProgramEvent.jsx
     ---------------------------------------------------*/
@@ -231,6 +739,398 @@ body{
         padding: 50px 30px 0px 30px;
         
     }
+    .card-body{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .card-body .card-title{
+        color: #02A7B0;
+    }
+    .to-a{
+        text-decoration: none;
+    }
+    .all-actu a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .all-actu{
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #02A7B0;
+        cursor: pointer;
+       
+    }
+    .all-actu:hover{
+        background-color: #86179A;
+    }
+    .all-actu a:hover{
+        color: #fff;
+    }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #86179A;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    color: #fff;
+    width: 25%;
+ }
+ .info_foot{
+    font-size: 13px;
+ }
+ .face {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .face img{
+    height: 25px;
+    width: 25px;
+ }
+ .other img{
+    height: 50px;
+    width: 50px;
+ }
+ /*---------------------------------------------------
+        ToNavbar.jsx
+---------------------------------------------------*/
+.top-navbar{
+    display: flex;
+    justify-content: flex-end;
+   align-items: center;
+}
+.top-navbar div{
+margin: 1.5rem;
+color: #86179A;
+cursor: pointer;
+}
+/*---------------------------------------------------
+        Actions.jsx
+---------------------------------------------------*/
+.content-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 1rem;
+ }
+ .header-actions{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .action-item{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+ }
+ .action{
+     display: block;
+     width: 100%;
+ }
+ .action-item a{
+     text-decoration: none;
+     color: #86179A;
+ }
+ .action-item span{
+     width: 20%;
+     margin: 1rem;
+ }
+ .all-action{
+    position: relative;
+    left: 400px;
+    width: 25%;
+ }
+/*----------------------------------------------------------------
+            Partenaire.jsx
+------------------------------------------------------------------*/
+.partenaire-{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parte{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+    /*border-radius: 5px;*/
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.parenaire-{
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+   
+}
+/*----------------------------------------------------------------
+            Temoignage.jsx
+------------------------------------------------------------------*/
+.temoin{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.temoin-{
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.-card-{
+    margin: 1rem;
+}
+/*------------------------------------------------------------------
+            Direct.jsx
+--------------------------------------------------------*/
+.direct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(134, 23, 154, 0.7),
+        rgba(134, 23, 154, 0.8)
+      ) ,url("../public/Scolarisation_007_IMG_9148\ 1.png") ;
+}
+.titre-{
+    color: #fff;
+    opacity: 1;
+    margin: 2rem;
+}
+.content-direct{
+    border: 1px solid #fff;
+    width: 98%;
+    height: 80%;
+}
+/*-----------------------------------------------------------
+                Bannier.jsx
+-------------------------------------------------------------*/
+.content-bannier{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.context-ba{
+    border: 1px solid green;
+    width: 60%;
+    height: 350px;
+    background-color: #02A7B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-ba{
+    text-align: center;
+}
+.lien a{
+    color: #86179A;
+    text-decoration: none;
+}
+.corps{
+    width: 90%;
+    text-align: justify;
+}
+.ba-{
+    font-weight: bold;
+}
+.image-{
+    width: 40%;
+}
+.image- img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------
+            Actualite.jsx
+---------------------------------------------------*/
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content-news{
+    margin-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.blocs-{
+    border: 1px solid green;
+    width: 25%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000;
+}
+.blocs- img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
+
+.liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color:#000 ;
+}
+.liens a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-text{
+    font-size: 14px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------------------
+                Newlatter.jsx
+-----------------------------------------------------------------------------*/
+.newlatter-content{
+    width: 100%;
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-new{
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.submit input{
+    background-color: #02A7B0;
+    color: #fff;
+}
+.formulaire{
+    width: 80%;
+}
+/*--------------------------------------------------------------
+            Vosdons.jsx traite la rubrique dons
+--------------------------------------------------------------*/
+.vosdon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vos_content{
+    width: 100%;
+    height: 390px;
+    padding: 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.card_{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_ img{
+    width: 100%;
+    height: 220px;
+}
+.price_{
+    background-color: #fff;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prix_{
+    font-size: 2rem;
+    color: #f23224;
+    font-weight: bolder;
+}
+
+.dons_{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dons_ a{
+    text-decoration: none;
+    color: #fff;
+}
+.vos_bottom{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+.vos_pourcent{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.vos_pourcent span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -238,14 +1138,42 @@ body{
         box-sizing: content-box;
         padding: 0px;
         margin: 0px;
-        background-color:rgba(241, 81, 86,0.3);
+        background-color:#fff;
     }
+     /*-----------------------------------------
+            TopNavbar.jx
+    ---------------------------------------------*/
+
+    .top-navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #02A7B0;
+    }
+     /*-----------------------------------------
+            Navbar.jx
+    ---------------------------------------------*/
     .navbar{
         width: 100%;
         height: 150px;
         display:  flex;
         justify-content: center;
         align-items: center;
+    }
+    .partenaire{
+        display: none;
+    }
+    .dropdown-item{
+        margin-top: 1rem;
+        color: #02A7B0;
+        background-color: #86179A;
+    }
+    .dropdown-toggle span{
+        color: #86179A;
+        outline: none;
+    }
+    .a{
+        text-decoration: none;
+        color: #02A7B0;
     }
     .items-navbar{
         display: flex;
@@ -254,21 +1182,40 @@ body{
         width: 100%;
         height: 100%;
     }
-    .a{
-        text-decoration: none;
-        color: #000;
+    .don{
+        background-color: #86179A;
+        padding: 0.6rem;
+        color: #fff;
     }
+    .don i {
+        margin-right: 0.5rem;
+        color: #f23224;
+    }
+    
+    .don a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .don a:hover{
+        color: #fff;
+    }
+    
+    .a:hover{
+        border-top: 3px solid #86179A;
+        color: #86179A;
+        
+    }
+    
     .logo{
         text-decoration: none;
         color: #fff;
     }
-    .a:hover{
-        border-bottom: 2px solid red;
-        color: #000;
-        
-    }
     .lateral{
         display: none;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;
     }
 /*----------------------------------------------------------
                 Carousol.jsx
@@ -284,6 +1231,14 @@ body{
 .slide{
     padding: 0px 30px 0px 30px;
 }
+.carousel-caption{
+    font-size: 1.8rem;
+}
+.carousel-caption p{
+    background-color: #02A7B0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
    /*---------------------------------------------------
             ProgramEvent.jsx
     ---------------------------------------------------*/
@@ -295,10 +1250,414 @@ body{
         padding: 50px 30px 0px 30px;
         
     }
+    .card-body{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .card-body .card-title{
+        color: #02A7B0;
+    }
+    .to-a{
+        text-decoration: none;
+    }
+    .all-actu a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .all-actu{
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #02A7B0;
+        cursor: pointer;
+       
+    }
+    .all-actu:hover{
+        background-color: #86179A;
+    }
+    .all-actu a:hover{
+        color: #fff;
+    }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #86179A;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    color: #fff;
+    width: 25%;
+ }
+ .info_foot{
+    font-size: 11px;
+ }
+ .face {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .face img{
+    height: 25px;
+    width: 25px;
+ }
+ .other img{
+    height: 50px;
+    width: 50px;
+ }
+ /*---------------------------------------------------
+        ToNavbar.jsx
+---------------------------------------------------*/
+.top-navbar{
+    display: flex;
+    justify-content: flex-end;
+   align-items: center;
+}
+.top-navbar div{
+margin: 1.5rem;
+color: #86179A;
+cursor: pointer;
+}
+/*---------------------------------------------------
+        Actions.jsx
+---------------------------------------------------*/
+.content-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 1rem;
+ }
+ .header-actions{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .action-item{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+ }
+ .action{
+     display: block;
+     width: 100%;
+ }
+ .action-item a{
+     text-decoration: none;
+     color: #86179A;
+ }
+ .action-item span{
+     width: 20%;
+     margin: 1rem;
+ }
+ .TEXT{
+    width: 70%;
+ }
+ .all-action{
+    position: relative;
+    left: 280px;
+    width: 35%;
+ }
+/*----------------------------------------------------------------
+            Partenaire.jsx
+------------------------------------------------------------------*/
+.partenaire-{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parte{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+    /*border-radius: 5px;*/
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.parenaire-{
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+   
+}
+/*----------------------------------------------------------------
+            Temoignage.jsx
+------------------------------------------------------------------*/
+.temoin{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.temoin-{
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.-card-{
+    margin: 1rem;
+}
+/*------------------------------------------------------------------
+            Direct.jsx
+--------------------------------------------------------*/
+.direct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(134, 23, 154, 0.7),
+        rgba(134, 23, 154, 0.8)
+      ) ,url("../public/Scolarisation_007_IMG_9148\ 1.png") ;
+}
+.titre-{
+    color: #fff;
+    opacity: 1;
+    margin: 2rem;
+}
+.content-direct{
+    border: 1px solid #fff;
+    width: 98%;
+    height: 80%;
+}
+/*-----------------------------------------------------------
+                Bannier.jsx
+-------------------------------------------------------------*/
+.content-bannier{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.context-ba{
+    border: 1px solid green;
+    width: 60%;
+    height: 350px;
+    background-color: #02A7B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-ba{
+    text-align: center;
+}
+.lien a{
+    color: #86179A;
+    text-decoration: none;
+}
+.corps{
+    width: 90%;
+    text-align: justify;
+}
+.ba-{
+    font-weight: bold;
+}
+.image-{
+    width: 40%;
+}
+.image- img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------
+            Actualite.jsx
+---------------------------------------------------*/
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
-@media only screen and (min-width: 745px) and (max-width: 767px) {
+.content-news{
+    margin-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.blocs-{
+    border: 1px solid green;
+    width: 25%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000;
+}
+.blocs- img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
 
+.liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color:#000 ;
+}
+.liens a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-text{
+    font-size: 14px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------------------
+                Newlatter.jsx
+-----------------------------------------------------------------------------*/
+.newlatter-content{
+    width: 100%;
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-new{
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.submit input{
+    background-color: #86179A;
+    color: #fff;
+}
+.formulaire{
+    width: 90%;
+}
+/*--------------------------------------------------------------
+            Vosdons.jsx traite la rubrique dons
+--------------------------------------------------------------*/
+.vosdon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vos_content{
+    width: 100%;
+    height: 390px;
+    padding: 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.card_{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_ img{
+    width: 100%;
+    height: 220px;
+}
+.price_{
+    background-color: #fff;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prix_{
+    font-size: 2rem;
+    color: #f23224;
+    font-weight: bolder;
+}
+
+.dons_{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dons_ a{
+    text-decoration: none;
+    color: #fff;
+}
+.vos_bottom{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+.vos_pourcent{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.vos_pourcent span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+}
+@media only screen and (min-width: 745px) and (max-width: 767px) {
+ /*-----------------------------------------
+            TopNavbar.jx
+    ---------------------------------------------*/
+
+    .top-navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #02A7B0;
+    }
+     /*-----------------------------------------
+            Navbar.jx
+    ---------------------------------------------*/
     .navbar{
         width: 100%;
         height: 80px;
@@ -313,27 +1672,62 @@ body{
         width: 100%;
         height: 100%;
     }
+    .partenaire{
+        display: none;
+    }
+    .dropdown-item{
+        margin-top: 1rem;
+        color: #02A7B0;
+        background-color: #86179A;
+    }
+    .dropdown-toggle span{
+        color: #86179A;
+        outline: none;
+    }
     .a{
         text-decoration: none;
-        color: #000;
+        color: #02A7B0;
         size: 10px;
     }
+    .don{
+        background-color: #86179A;
+        padding: 0.6rem;
+        color: #fff;
+    }
+    .don i {
+        margin-right: 0.5rem;
+        color: #f23224;
+    }
+    
+    .don a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .don a:hover{
+        color: #fff;
+    }
+    
+    .a:hover{
+        border-top: 3px solid #86179A;
+        color: #86179A;
+        
+    }
+    
     .logo{
         text-decoration: none;
         color: #fff;
     }
-    .a:hover{
-        border-bottom: 2px solid red;
-        color: #000;
-        
-    }
+   
     .a i,.lat{
         display: inline-block;
     }
     .nav-lateral{
         display: none;
     }
-
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
 /*----------------------------------------------------------
                 Carousol.jsx
 ----------------------------------------------------------*/
@@ -348,7 +1742,14 @@ body{
     .slide{
         padding: 0px 30px 0px 30px;
     }
-
+    .carousel-caption{
+        font-size: 1.8rem;
+    }
+    .carousel-caption p{
+        background-color: #02A7B0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
         /*---------------------------------------------------
             ProgramEvent.jsx
     ---------------------------------------------------*/
@@ -360,10 +1761,415 @@ body{
         padding: 50px 30px 0px 30px;
         
     }
+    .card-body{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .card-body .card-title{
+        color: #02A7B0;
+    }
+    .to-a{
+        text-decoration: none;
+    }
+    .all-actu a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .all-actu{
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #02A7B0;
+        cursor: pointer;
+       
+    }
+    .all-actu:hover{
+        background-color: #86179A;
+    }
+    .all-actu a:hover{
+        color: #fff;
+    }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #86179A;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    color: #fff;
+    width: 25%;
+ }
+ .info_foot{
+    font-size: 13px;
+ }
+ .face {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .face img{
+    height: 25px;
+    width: 25px;
+ }
+ .other img{
+    height: 50px;
+    width: 50px;
+ }
+ /*---------------------------------------------------
+        ToNavbar.jsx
+---------------------------------------------------*/
+.top-navbar{
+    display: flex;
+    justify-content: flex-end;
+   align-items: center;
+}
+.top-navbar div{
+margin: 1.5rem;
+color: #86179A;
+cursor: pointer;
+}
+/*---------------------------------------------------
+        Actions.jsx
+---------------------------------------------------*/
+.content-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 1rem;
+ }
+ .header-actions{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .action-item{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+ }
+ .action{
+     display: block;
+     width: 100%;
+ }
+ .action-item a{
+     text-decoration: none;
+     color: #86179A;
+ }
+ .action-item span{
+     width: 20%;
+     margin: 1rem;
+ }
+ .TEXT{
+    width: 65%;
+ }
+ .all-action{
+    position: relative;
+    left: 250px;
+    width: 35%;
+ }
+/*----------------------------------------------------------------
+            Partenaire.jsx
+------------------------------------------------------------------*/
+.partenaire-{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parte{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+    /*border-radius: 5px;*/
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.parenaire-{
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+   
+}
+/*----------------------------------------------------------------
+            Temoignage.jsx
+------------------------------------------------------------------*/
+.temoin{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.temoin-{
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.-card-{
+    margin: 1rem;
+}
+/*------------------------------------------------------------------
+            Direct.jsx
+--------------------------------------------------------*/
+.direct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(134, 23, 154, 0.7),
+        rgba(134, 23, 154, 0.8)
+      ) ,url("../public/Scolarisation_007_IMG_9148\ 1.png") ;
+}
+.titre-{
+    color: #fff;
+    opacity: 1;
+    margin: 2rem;
+}
+.content-direct{
+    border: 1px solid #fff;
+    width: 98%;
+    height: 80%;
+}
+/*-----------------------------------------------------------
+                Bannier.jsx
+-------------------------------------------------------------*/
+.content-bannier{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.context-ba{
+    border: 1px solid green;
+    width: 60%;
+    height: 350px;
+    background-color: #02A7B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-ba{
+    text-align: center;
+}
+.lien a{
+    color: #86179A;
+    text-decoration: none;
+}
+.corps{
+    width: 90%;
+    text-align: justify;
+}
+.ba-{
+    font-weight: bold;
+}
+.image-{
+    width: 40%;
+}
+.image- img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------
+            Actualite.jsx
+---------------------------------------------------*/
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
-@media only screen and (max-width: 744px) {
+.content-news{
+    margin-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.blocs-{
+    border: 1px solid green;
+    width: 25%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000;
+}
+.blocs- img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
 
+.liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color:#000 ;
+}
+.liens a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-text{
+    font-size: 14px;
+    font-weight: 900;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------------------
+                Newlatter.jsx
+-----------------------------------------------------------------------------*/
+.newlatter-content{
+    width: 100%;
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-new{
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.submit input{
+    background-color: #02A7B0;
+    color: #fff;
+}
+.formulaire{
+    width: 90%;
+}
+/*--------------------------------------------------------------
+            Vosdons.jsx traite la rubrique dons
+--------------------------------------------------------------*/
+.vosdon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vos_content{
+    width: 100%;
+    height: 390px;
+    padding: 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.card_{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_ img{
+    width: 100%;
+    height: 220px;
+}
+.price_{
+    background-color: #fff;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prix_{
+    font-size: 2rem;
+    color: #f23224;
+    font-weight: bolder;
+}
+
+.dons_{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dons_ a{
+    text-decoration: none;
+    color: #fff;
+}
+.vos_bottom{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+.vos_pourcent{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.vos_pourcent span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+}
+@media only screen and (max-width: 744px) {
+ /*-----------------------------------------
+            TopNavbar.jx
+    ---------------------------------------------*/
+
+    .top-navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #02A7B0;
+    }
+     /*-----------------------------------------
+            Navbar.jx
+    ---------------------------------------------*/
     .navbar{
         width: 100%;
         height: 80px;
@@ -379,11 +2185,47 @@ body{
         width: 100%;
         height: 100%;
     }
+    .partenaire{
+        display: none;
+    }
+    .dropdown-item{
+        margin-top: 1rem;
+        color: #02A7B0;
+        background-color: #86179A;
+    }
+    .dropdown-toggle span{
+        color: #86179A;
+        outline: none;
+    }
     .a{
         text-decoration: none;
-        color: #000;
+        color: #02A7B0;
         size: 12px;
     }
+    .don{
+        background-color: #86179A;
+        padding: 0.6rem;
+        color: #fff;
+    }
+    .don i {
+        margin-right: 0.5rem;
+        color: #f23224;
+    }
+    
+    .don a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .don a:hover{
+        color: #fff;
+    }
+    
+    .a:hover{
+        border-top: 3px solid #86179A;
+        color: #86179A;
+        
+    }
+    
     .logo{
         text-decoration: none;
         color: #fff;
@@ -398,6 +2240,9 @@ body{
     .nav-lateral{
         display: inline-block;
     }
+    .ong-p,.information{
+        display: none;
+    }
     .a i,.lat{
         display: none;
     }
@@ -406,6 +2251,10 @@ body{
     }
     .item-1,.item-2,.item-3,.item-4{
        margin: 1.5rem;
+    }
+    .logo img{
+        width: 50px;
+        height: 50px;
     }
    /*----------------------------------------------------------
                 Carousol.jsx
@@ -419,10 +2268,17 @@ body{
         object-fit: cover;
     }
     .slide{
-        padding: 0px 30px 0px 30px;
+        padding: 0px 20px 0px 20px;
     }
-
-        /*---------------------------------------------------
+    .carousel-caption{
+        font-size: 1.1rem;
+    }
+    .carousel-caption p{
+        background-color: #02A7B0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+ /*---------------------------------------------------
             ProgramEvent.jsx
     ---------------------------------------------------*/
     .content-event{
@@ -433,5 +2289,414 @@ body{
         padding: 50px 30px 0px 30px;
         
     }
+    .card-body{
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .card-body .card-title{
+        color: #02A7B0;
+    }
+    .to-a{
+        text-decoration: none;
+    }
+    .all-actu a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .all-actu{
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #02A7B0;
+        cursor: pointer;
+       
+    }
+    .all-actu:hover{
+        background-color: #86179A;
+    }
+    .all-actu a:hover{
+        color: #fff;
+    }
+/*---------------------------------------------------
+        Footer.jsx
+---------------------------------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: #86179A;
+ }
+ .foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin: 1rem;
+    width: 50%;
+ }
+ .info_foot{
+    font-size: 10px;
+ }
+ .item_f{
+    display: none;
+ }
+ .info_foot h4{
+    font-size: 10px;
+ }
+ .face {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .face img{
+    height: 20px;
+    width: 20px;
+ }
+ .other img{
+    height: 30px;
+    width: 30px;
+ }
+ /*---------------------------------------------------
+        ToNavbar.jsx
+---------------------------------------------------*/
+.top-navbar{
+    display: flex;
+    justify-content: flex-end;
+   align-items: center;
+}
+.top-navbar div{
+margin: 1.5rem;
+color: #86179A;
+cursor: pointer;
+}
+/*---------------------------------------------------
+        Actions.jsx
+---------------------------------------------------*/
+.content-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 12px;
+ }
+ .head{
+    font-size: 20px;
+ }
+ .header-actions{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .action-item{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+ }
+ .action{
+     display: block;
+     width: 100%;
+ }
+ .action-item a{
+     text-decoration: none;
+     color: #86179A;
+ }
+ .action-item span{
+     width: 20%;
+     margin: 1rem;
+ }
+ .TEXT{
+    width: 80%;
+    font-size: 12px;
+ }
+ .all-action{
+    position: relative;
+    left: 50px;
+    width: 70%;
+ }
+/*----------------------------------------------------------------
+            Partenaire.jsx
+------------------------------------------------------------------*/
+.partenaire-{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    
+}
+.parte{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+    /*border-radius: 5px;*/
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+}
+.parenaire-{
+    width: 60px;
+    height: 60px;
+    margin: 1rem;
+   
+}
+/*----------------------------------------------------------------
+            Temoignage.jsx
+------------------------------------------------------------------*/
+.temoin{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.temoin-{
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.-card-{
+    margin: 1rem;
+}
+/*------------------------------------------------------------------
+            Direct.jsx
+--------------------------------------------------------*/
+.direct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(134, 23, 154, 0.7),
+        rgba(134, 23, 154, 0.8)
+      ) ,url("../public/Scolarisation_007_IMG_9148\ 1.png") ;
+}
+.titre-{
+    color: #fff;
+    opacity: 1;
+    margin: 2rem;
+}
+.content-direct{
+    border: 1px solid #fff;
+    width: 98%;
+    height: 80%;
+}
+/*-----------------------------------------------------------
+                Bannier.jsx
+-------------------------------------------------------------*/
+.content-bannier{
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.context-ba{
+    border: 1px solid green;
+    width: 60%;
+    height: 350px;
+    background-color: #02A7B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-ba{
+    text-align: center;
+}
+.lien a{
+    color: #86179A;
+    text-decoration: none;
+}
+.corps{
+    width: 90%;
+    text-align: justify;
+}
+.ba-{
+    font-weight: bold;
+}
+.image-{
+    width: 40%;
+}
+.image- img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------------------------
+            Actualite.jsx
+---------------------------------------------------*/
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content-news{
+    margin-top: 2rem;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+.blocs-{
+    border: 1px solid green;
+    width: 25%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #000;
+}
+.blocs- img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+}
+
+.liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color:#000 ;
+}
+.liens a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-text{
+    font-size: 13px;
+    font-weight: 900;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------------------
+                Newlatter.jsx
+-----------------------------------------------------------------------------*/
+.newlatter-content{
+    width: 100%;
+    margin-top: 40px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-new{
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.submit input{
+    background-color: #02A7B0;
+    color: #fff;
+}
+.formulaire{
+    width: 90%;
+}
+
+/*--------------------------------------------------------------
+            Vosdons.jsx traite la rubrique dons
+--------------------------------------------------------------*/
+.vosdon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vos_content{
+    width: 100%;
+    height: 390px;
+    padding: 3px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.card_{
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+.img_ img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.price_{
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.prix_{
+    font-size: 0.8rem;
+    color: #f23224;
+    font-weight: bolder;
+}
+
+.dons_{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dons_ a{
+    text-decoration: none;
+    color: #fff;
+}
+.vos_bottom{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #000;
+}
+.vos_pourcent{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.vos_pourcent span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
 }

@@ -10,16 +10,34 @@ const Navbar=()=>{
             <nav className="navbar navbar-light bg-light">
                 <div className="container-fluid items-navbar">
                 <span className="nav-lateral"><Lateral/></span>
-                   <Link to='/' className="logo btn btn-dark">
-                        LOGO
+                   <Link to='/' className="logo  " >
+                        <img src="./LOGO.png" alt="logo" />
                    </Link>
-                   <div className="item- nav"> <Link to='/' className="a"><i className="bi bi-house-door-fill" style={{color:"red",marginRight:"4px"}} title="Home"></i><span className="lat">Home</span></Link></div>
-                   <div className="item- nav"> <Link to='/' className="a"><i class="bi bi-question-lg" style={{color:"red",marginRight:"4px"}} title="About"></i><span className="lat">A Propos</span></Link></div>
-                   <div className="item- nav"><Link to='/' className="a"><i className="bi bi-lightning-charge-fill " style={{color:"red",marginRight:"4px"}} title="Activités"></i><span className="lat">Actions</span></Link></div>
-                   <div className="item- nav"><Link to="/" className="a"><i className="bi bi-stopwatch-fill" style={{color:"red",marginRight:"4px"}} title="Evènement"></i><span className="lat">Evènements</span></Link></div>
-                   <div className="item- nav"><Link to="/" className="a"><i className="bi bi-telephone-fill" style={{color:"red",marginRight:"4px"}} title="Contact"></i><span className="lat">Contacts</span></Link></div>
+                   <div className="item- nav"> 
+                        <div className="dropdown ong-p">
+                            <button className="btn btn-white dropdown-toggle item- " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>QUI SOMME-NOUS</span>
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><Link to="" className="dropdown-item lat" >Présentation</Link></li>
+                                <li><Link to="" className="dropdown-item lat" >Nos actions</Link></li>
+                                <li><Link to="" className="dropdown-item lat" >Nos Partenaires</Link></li>
+                            </ul>
+                        </div>
+                   </div>
+                   <div className="item- nav"><Link to='/' className="a"><span className="lat">ACTUALITES</span></Link></div>
+                   <div className="dropdown information">
+                            <button className="btn btn-white dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span> MISSIONS HUMANITAIRES</span>
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><Link to="" className="dropdown-item lat" >Missions</Link></li>
+                                <li><Link to="" className="dropdown-item lat" >FAQ</Link></li>
+                            </ul>
+                    </div>
+                   <div className="item- nav"><Link to="/contact" className="a"><span className="lat">J’AGIS</span></Link></div>
                    <div className="item- nav ">
-                    <button type="button" className="btn btn-danger don" >Fais un don </button>
+                    <div  className=" don" ><Link to=""><i className="bi bi-heart-fill"></i><span>Fais un don</span></Link> </div>
                    </div>
                 </div>
             </nav>
