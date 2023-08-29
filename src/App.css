@@ -55,7 +55,102 @@ body{
 .nav-lateral{
     display: none;
 }
-
+.select{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.montant{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    width: 100%;
+}
+.montant li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 1rem;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+.montant ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 1rem;
+    height: 100px;
+    width: 100%;
+    cursor: pointer;
+}
+.montant li.active{
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 33%;
+}
+.montant li .devise{
+    color: #ffffff;
+    font-size: 8px;
+}
+.montant li.active .devise{
+    color: #86179A;
+    font-size: 8px;
+}
+.montant li .price{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.montant li.active .price{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #86179A;
+}
+.montant-{
+ border: none;
+ outline: none;
+ background-color: #02A7B0;
+ border-bottom: 1px solid #ffffff;
+ color: #fff;
+}
+.montant-libre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit{
+    margin-top: 1rem;
+    background-color: #86179A;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+.submit input{
+    background-color: #86179A;
+}
+.valider{
+    outline: none;
+    border: none;
+    background-color: #86179A;
+    color: #fff;
+}
+.select span{
+   color: #ffffff;
+   cursor: pointer;
+   padding: 0.5rem;
+}
+.select span.activer{
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 /*----------------------------------------------------------
                 Carousol.jsx
 ----------------------------------------------------------*/
@@ -121,8 +216,45 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
+/*-----------------------------------------
+            Apropos.jx
+    ---------------------------------------------*/
+.item-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.text-{
+    width: 80%;
+}
+.vision{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.content-vision{
+    width: 80%;
+}
+/*-----------------------------------------
+            Mission.jx
+---------------------------------------------*/
+.text-m{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    }
+.content-m{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media only screen and (min-width: 1200px) {
     /*-----------------------------------------
             TopNavbar.jx
@@ -342,8 +474,9 @@ cursor: pointer;
 }
 .all-action{
     position: relative;
-    left: 500px;
-    width: 20%;
+    left: 400px;
+    width: 40%;
+    text-align: center;
  }
 .TEXT{
     width: 80%;
@@ -353,8 +486,7 @@ cursor: pointer;
 ------------------------------------------------------------------*/
 .partenaire-{
     width: 100%;
-    height: 400px;
-    margin-top: 2rem;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -363,8 +495,7 @@ cursor: pointer;
 .parte{
     width: 100%;
     height: 150px;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
-    /*border-radius: 5px;*/
+    padding: 0px 100px 0px 100px;
     background-color: #fff;
     display: flex;
     justify-content: space-between;

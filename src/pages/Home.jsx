@@ -19,6 +19,8 @@ const Home=()=>{
         wrap.classList.toggle("fixed",this.window.scrollY>0)
         
       });
+     
+
     return(
         <>
              <div className="conteneur">
